@@ -1,0 +1,162 @@
+/* selektor uniwersalny * - wybiera WSZYSTKIE elementy na stronie */
+* {
+    color: #222222;
+}
+
+/* selektor znacznika */
+body {
+    margin: 0;
+}
+
+/* selektor laczony - bez spacji */
+div#universal {
+    background-color: aqua;
+}
+
+/* selektor potomka (spacja) wybiera WSZYSTKIE elementy potomne (czytam od prawej) */
+#universal p {
+    margin: 0;
+}
+
+/* selektor bezpośredniego potomka, wybiera elementy potmone na PIERWSZYM poziomie zagnieżdżenia - oznaczany przez ">" */ 
+#offspring > p {
+    color: red;
+}
+
+/* selektor bezpośredniego rodzeństwa wybiera kolejny element na tym samym poziomie zagnieżdżenia oznaczamy znakiem "+" */
+#offspring p + .offspring-inner {
+    background-color: violet;
+}
+
+/* selektor rodzeństwa wybiera kolejny element na tym samym poziomie zagnieżdżenia. Oznaczamy znakiem "~" */
+#offspring p ~ .offspring-inner {
+    background-color: violet;
+}
+
+/* hierarchia css */
+#specificity{
+    background-color: yellow;
+}
+
+.specificity{
+    background-color: green;
+}
+
+/* pozycjonowanie */
+/* Zmiana pozycji jakiegokolwiek elementu na inna niz statyczna, daje nam dostep do wlasciwosci top, left, right, bottom, z-index. Ustawiajac wartosci dla top, left, right, bottom - okreslamy O ILE jednostek (np. 100px) odsuwamy od DANEJ KRWEDZI. UStawiajac z-index zmieniam kolejnosc elementu po osi Z (można ustawić wartości ujemne dla z-index) */
+
+/* pozycjonowanie relatywne - rezerwuje miejsce dla elementu (zachowuje flow dokumentu) - zazwyczan uzywane dla konrenerow (elementow), ktore trzymaja sobie elementy pozycjonowane absolutnie */
+#positioned {
+    height: 400px;
+    background-color: green;
+    position: relative;
+}
+
+#positioned .red {
+    background-color: red;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+}
+
+#positioned .blue {
+    background-color: blue;
+}
+
+/* pozycja fixed, wyciaga z element z flow i ustawia go wzgledem okna przeglądarki */ 
+#footer {  
+    height: 50px;
+    position: fixed;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* pozycja absoluta i fix wplywa na szerekosc elementu */
+
+/* jednostki miary */
+#miary > div {
+    background-color: aqua;
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+#piksele {
+    width: 400px;
+}
+
+
+/* em - zależne od właściwości font size rodzica */
+#em {
+    width: 50em;
+}
+
+/* % -zależny od wartości właściwości jakiegokolwiek rodzica, WYSOKOŚĆ USTAWIAMY W PX A SZEROKOŚĆ W % */
+#procenty {
+    width: 50%;
+}
+
+/* vh ustawia wysokość w stosunku do okna przeglądarki */
+#header {
+    height: 100vh;
+    /* width: calc(100vw - 18px); */
+    background-color: coral;
+}
+
+/* pseudo-elementy */
+#pseudo-elementy p::before {
+    /* zeby pseudoelementy w ogole mogly znalezc sie na stronie musimy stawic wlasciwosc "content" */
+    content: '';
+}
+
+/* pseudo-klasy */
+#pseudo-klasy p:first-child{
+    color: darkviolet;
+}
+
+#pseudo-klasy p:last-child{
+    color: lawngreen;
+}
+
+#linki a {
+    color: violet;
+}
+
+
+/* kiedy kursor nad */
+#linki a:hover {
+    color: red;
+}
+
+/* odwiedzone linki */
+#linki a:visited {
+    color: purple
+}
+
+/* kiedy focus na input (podswietlenie okienka)*/
+form input:focus {
+    border: 3px solid red; 
+}
+
+/* kolejne dzieci (500+) */
+/* roznica pomiedzy nth-child i nth-of-type. Nth-child szuka elementów w realcji rodzic-dziecko, nth-of-type szuka konkretnego typu selektora */
+
+/* #lista ol li:nth-of-type(even) {
+    color: yellow;
+} */
+
+/* wzor an+b
+a: oznacza co ile elemntów chcemy zrobić przeskok
+b: od ktorego elementu zaczyna
+
+parametr b jest opcjonalny- jezeli go nie podamy, zacznie od elementu "a" ktory znajduje sie przy n */ 
+#lista ol li:nth-of-type(3n + 2) {
+    color: yellow;
+}
+
+
+
+
+
+

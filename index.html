@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS podstawy</title>
+    
+    <!-- glowne style -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+   <!-- viewport units -->
+   <!-- header#header -->
+   <header id="header"></header>
+   
+    <!-- dla selektora uniwersalnego -->
+    
+    <!-- #universal>p{lorem} -->
+    
+    <div id="universal">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatibus deserunt reiciendis quos quae, ducimus molestias officiis non odit atque, maxime debitis quia tempora placeat, odio beatae aliquid natus necessitatibus.</p>
+    </div>
+    
+    <!-- bezpośredni potemek -->
+    <!--  div o id "offspring, w srodku 2 paragrafy z lorem, pod drugim paragrafem div o klasie "offspring-inner" w nim paragraf z lorem -->
+    <!-- #offspring>p{lorem}*2+.offspring-inner>p{lorem} -->
+   <div id="offspring">
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod odit quasi quidem! Quos eum ipsam molestias voluptates ducimus repudiandae cum a, incidunt animi cupiditate! Odio natus autem, veritatis error et.</p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa mollitia earum quas vitae, ab et. Qui consequatur facere non quis quae praesentium sed ducimus nobis dolorum illum! Commodi vel, provident!</p>
+       <div class="offspring-inner">
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, dicta, vel labore enim delectus et fuga amet officia! Quae enim numquam ut, nam, tenetur beatae perferendis libero! Maxime dolorem, laborum!</p>
+       </div>
+        <div class="offspring-inner">
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, dicta, vel labore enim delectus et fuga amet officia! Quae enim numquam ut, nam, tenetur beatae perferendis libero! Maxime dolorem, laborum!</p>
+        </div>
+   </div>
+   
+   <!-- hierarchia css -->
+   <!-- #specificity.specificity>p{lorem} -->
+   
+   <div id="specificity" class="specificity">
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem qui, dicta voluptatibus nobis, obcaecati, itaque, sed accusamus animi nisi tempore quia! Laborum enim quod earum, modi. Quis odio at quaerat!</p>
+   </div>
+   
+    <!--  pozycjonowanie -->
+    <div id="positioned">
+        <p class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ullam, voluptatem deleniti asperiores officiis architecto nostrum molestias quaerat dignissimos praesentium minus dolorem similique ad, tempore rerum dolor dicta eveniet dolore?</p>
+        <p class="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic rem debitis sint, deserunt corporis accusamus aliquid eveniet sequi voluptatem autem ab, iusto temporibus quasi. Eveniet, eum itaque praesentium et maiores.</p>
+    </div>
+    
+    <!-- jednostki miary css -->
+    <div id="miary">
+        <div id="piksele">400px</div>
+    <!--#em{50em} -->
+        <div id="em">50em</div>
+    <!--   #procenty{50%} -->
+        <div id="procenty">50%</div>
+    </div>
+    
+    <!-- PSEUDOELEMENTY -->
+    <div id="pseudo-elementy">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi eveniet velit odit, neque sit. Quam in aut sed ratione, nulla hic blanditiis facilis praesentium eveniet impedit, repellendus sunt perferendis obcaecati.</p>
+    </div>
+    
+    <!-- PSEUDOKLASY -->
+    <div id="pseudo-klasy">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores suscipit omnis consequuntur dicta itaque. Aliquid repudiandae, rerum, sequi similique mollitia fuga itaque pariatur temporibus a debitis ea odio facere odit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eius dolorem eum at, voluptas quo rem reiciendis optio error, dolores voluptate libero dignissimos ea. Pariatur eveniet fuga, explicabo ipsum alias.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In recusandae quia quam iure neque quod aut, aliquid culpa quos totam nihil, alias quae repellendus magnam! Itaque aliquid ipsum, quod dolores.</p>
+    </div>
+    
+    <!-- div o id linki, w srodku 5 linkow z napisem link -->
+    <!-- #linki>a{Link $}*5 -->
+    <div id="linki">
+        <a href="">Link 1</a>
+        <a href="">Link 2</a>
+        <a href="">Link 3</a>
+        <a href="">Link 4</a>
+        <a href="http://google.com">Google</a>
+    </div>
+
+    <!-- form>(input+label{etykieta $})*5 -->
+    <form action="">
+        <input type="text">
+        <label for="">etykieta 1</label>
+        <input type="text">
+        <label for="">etykieta 2</label>
+        <input type="text">
+        <label for="">etykieta 3</label>
+        <input type="text">
+        <label for="">etykieta 4</label>
+        <input type="text">
+        <label for="">etykieta 5</label>
+    </form>
+    
+   <!--  div id "lista w nim lista numerowana, 5 elementow listy -->
+   
+   <!-- #lista>ol>li{element $}*5 -->
+   <div id="lista">
+       <ol>
+           <li>element 1</li>
+           <li>element 2</li>
+           <li>element 3</li>
+           <li>element 4</li>
+           <li>element 5</li>
+           <li>element 6</li>
+           <li>element 7</li>
+           <li>element 8</li>
+       </ol>
+   </div>
+    
+    
+    <!-- footer#footer -->
+    <!-- <footer id="footer"></footer> -->
+    
+    
+    
+    
+</body>
+</html>
