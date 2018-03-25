@@ -155,6 +155,57 @@ parametr b jest opcjonalny- jezeli go nie podamy, zacznie od elementu "a" ktory 
     color: yellow;
 }
 
+/* selektory atrybutów - łapanie po atrybucie, np. "type" "href"  */
+
+input[type] {
+    border: 2px solid green;
+}
+
+/* selektor atrybutu, łapanie po okroślenoej wartości atrybutu */
+
+input[type="tel"] {
+    border: 2px solid red;
+}
+
+
+/* zawiera w sobie caly lancuch znaków (jeden wyraz)  */
+input[title~="trzeci"]{
+    border: 2px solid yellow;
+}
+
+
+/* musi zawierać wystapienie DOWOLNEGO lancucha */
+input[title*="czwa"]{
+    border: 2px solid yellow;
+}
+
+
+/*  */
+input[title^="trzeci"]{
+    border: 2px solid yellow;
+}
+
+
+/*  */
+input[title~="trzeci"]{
+    border: 2px solid yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
